@@ -1,0 +1,113 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    background: #d6d6d6 url("../img/bg.jpg") 50% 50% no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.logo {
+    width: 93px;
+    height: 25px;
+    background: url("../img/logo.png") 50% 50% no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-item {
+    float: left;
+}
+
+.nav-item a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-item .email {
+    background-color: #3a82ee;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.nav-item a:hover {
+    color: #555;
+}
+
+.nav-item .email:hover {
+    color: #fff;
+    background-color: #2a72df;
+}
+
+.slogan {
+    color: #fff;
+    text-align: center;
+    font-weight: 200;
+}
+
+.slogan p {
+    margin: .2em 0;
+}
+
+.slogan .name {
+    font-size: 72px;
+    letter-spacing: .3em;
+}
+
+.slogan .job {
+    font-size: 32px;
+    letter-spacing: .7em;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 1.5dppx) {
+    body {
+        background-image: url("../img/bg@2x.jpg");
+    }
+
+    .logo {
+        background-image: url("../img/logo@2x.png");
+        background-size: 93px 25px;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1440/900) {
+    body {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1440/900) {
+    body {
+        background-size: cover;
+    }
+}
