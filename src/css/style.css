@@ -80,12 +80,12 @@ header {
 }
 
 .slogan .name {
-    font-size: 72px;
+    font-size: 62px;
     letter-spacing: .3em;
 }
 
 .slogan .job {
-    font-size: 32px;
+    font-size: 22px;
     letter-spacing: .7em;
 }
 
@@ -106,8 +106,59 @@ header {
     }
 }
 
-@media screen and (max-aspect-ratio: 1440/900) {
-    body {
-        background-size: cover;
+@media screen and (max-width: 640px) {
+    .slogan .name {
+        font-size: 58px;
+        letter-spacing: .2em;
+    }
+
+    .nav {
+        right: 10px;
+    }
+
+    .slogan .job {
+        font-size: 24px;
+        letter-spacing: .4em;
+    }
+
+    .nav-item .email {
+        position: fixed;
+        padding: 0 20px;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo {
+        left: 10px;
+        top: 10px;
+        background-size: 62px;
+        width: 62px;
+        height: 18px;
+    }
+
+    .nav-item a {
+        padding: 0 7px;
+        height: 15px;
+        line-height: 15px;
+        color: #777;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .nav-item .email {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .slogan .name {
+        font-size: 38px;
+        letter-spacing: .2em;
+    }
+
+    .slogan .job {
+        font-size: 18px;
+        letter-spacing: .3em;
     }
 }
