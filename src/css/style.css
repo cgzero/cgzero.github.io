@@ -7,7 +7,7 @@ body {
 
 body {
     font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    background: #d6d6d6 url("../img/bg.jpg") 50% 50% no-repeat;
+    background: #dfdede url("../img/bg.jpg") 50% 50% no-repeat;
     background-size: contain;
     display: flex;
     justify-content: center;
