@@ -8,30 +8,101 @@
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo"></div>
-        <ul class="nav">
-            <li class="nav-item">
-                <a target="_blank" href="https://github.com/cgzero">Github</a>
+    <section class="banner">
+        <div class="banner-inner">
+            <div class="photo"></div>
+            <div class="info">
+                <header class="title">
+                    <h1>CHEN GONG</h1>
+                    <h2>FRONT END DEVELOPER</h2>
+                </header>
+                <p class="desc">
+                    Hi! my names Chen Gong.<br>
+                    A Front End Engineer <a target="_blank" href="https://goo.gl/maps/sseRfnGafZU2">@Baidu Inc.</a><br>
+                    I like <a data-tag="dev" class="works-nav-link">develop</a>, <a data-tag="design" class="works-nav-link">design</a> and <a data-tag="photo" class="works-nav-link">photography</a>. 
+                </p>
+                <div class="socal-icons">
+                    <a target="_blank" href="https://github.com/cgzero" title="Github"><i class="gh-icon"></i></a>
+                    <a target="_blank" href="http://i.ui.cn/ucenter/213536.html" title="ui.cn"><i class="ui-icon"></i></a>
+                    <a target="_blank" href="http://instagram.com/cg_zero" title="instagram"><i class="ins-icon"></i></a>
+                </div>
+            </div>
+            <a href="mailto:cgzero@cgzero.com" class="mail-icon" title="email me"></a>
+        </div>
+    </section>
+    <section class="works">
+        <h2>MY WORKS</h2>
+        <nav class="works-nav">
+            <a data-tag="all" class="works-nav-link cur">All</a>
+            <a data-tag="dev" class="works-nav-link">Development</a>
+            <a data-tag="design" class="works-nav-link">Design</a>
+            <a data-tag="photo" class="works-nav-link">Photography</a>
+        </nav>
+        <ul class="works-list">
+            <li class="works-item" data-tag-item="design">
+                <a class="img-link" target="_blank" href="http://www.ui.cn/detail/153359.html">
+                    <img src="./photo/pageshot.jpg" width="280px" height="210px">
+                </a>
+                <p>
+                    <i class="works-tag">Design</i>
+                    <a href="http://www.ui.cn/detail/153359.html">Pageshot Web Design</a>
+                </p>
+                <p><span class="time">2015-08</span></p>
             </li>
-            <li class="nav-item">
-                <a target="_blank" href="http://i.ui.cn/ucenter/213536.html">Ui中国</a>
+            <li class="works-item" data-tag-item="design">
+                <a class="img-link" target="_blank" href="http://www.ui.cn/detail/153116.html">
+                    <img src="./photo/efe_tshirt.jpg" width="280px" height="210px">
+                </a>
+                <p>
+                    <i class="works-tag">Design</i>
+                    <a href="http://www.ui.cn/detail/153116.html">Baidu EFE T-shirt Design</a>
+                </p>
+                <p><span class="time">2015-08</span></p>
             </li>
-            <li class="nav-item">
-                <a target="_blank" href="http://instagram.com/cg_zero">instagram</a>
+            <li class="works-item" data-tag-item="design">
+                <a class="img-link" target="_blank" href="http://www.ui.cn/detail/154385.html">
+                    <img src="./photo/finex.jpg" width="280px" height="210px">
+                </a>
+                <p>
+                    <i class="works-tag">Design</i>
+                    <a target="_blank" href="http://www.ui.cn/detail/154385.html">Finex Web Design</a>
+                </p>
+                <p><span class="time">2013-12</span></p>
             </li>
-            <!-- <li class="nav-item">
-                <a target="_blank" href="https://500px.com/cgzero">500px</a>
-            </li> -->
-            <li class="nav-item">
-                <a target="_blank" class="email" href="mailto:cgzero@cgzero.com">Email me</a>
+            <li class="works-item" data-tag-item="design">
+                <a class="img-link" target="_blank" href="http://www.ui.cn/detail/153108.html">
+                    <img src="./photo/photofolid_2013-2016.jpg" width="280px" height="210px">
+                </a>
+                <p>
+                    <i class="works-tag">Design</i>
+                    <a target="_blank" href="http://www.ui.cn/detail/153108.html">Logofolio 2013-2016</a>
+                </p>
+                <p><span class="time">2013-10</span></p>
             </li>
         </ul>
-    </header>
-    <div class="slogan">
-        <p class="name">CHEN GONG</p>
-        <p class="job">FRONT END DEVELOPER</p>
-    </div>
+    </section>
+    <footer>copyright@2016 cgzero.com</footer>
+    <script src="./dep/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.works-nav-link').click(function () {
+                var self = $(this);
+                var tag = self.attr('data-tag');
+                $('.works-nav a').removeClass('cur');
+                $('.works-nav a[data-tag=' + tag + ']').addClass('cur');
+
+                if (tag === 'all') {
+                    $('.works-item').removeClass('hide');
+                }
+                else {
+                    $('.works-item').addClass('hide');
+                    $('.works-item[data-tag-item=' + tag + ']').removeClass('hide');
+                }
+
+                $('html').animate({scrollTop: $('.works-nav').offset().top}, 1000)
+            })
+        });
+    </script>
     <script>
     var _hmt = _hmt || [];
     (function() {

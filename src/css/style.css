@@ -7,158 +7,227 @@ body {
 
 body {
     font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    background: #dfdede url("../img/bg.jpg") 50% 50% no-repeat;
-    background-size: contain;
+    background-color: #f0f0f0; 
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all .1s;
+        -moz-transition: all .1s;
+        -ms-transition: all .1s;
+            transition: all .1s;
+}
+
+a:hover {
+    color: #306fff;
+}
+
+.banner {
+    height: 600px;
+    background: #e6e6e6 url("../img/banner_bg.jpg") 50% 100% repeat-x;
+    background-size: 1920px;
+}
+
+.banner-inner {
+    width: 1160px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.photo {
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    width: 450px;
+    height: 555px;
+    background: url("../img/photo.jpg") 50% 50% no-repeat;
+    background-size: 450px;
+    -webkit-mask: url("../img/photo_mask.png");
+       -moz-mask: url("../img/photo_mask.png");
+        -ms-mask: url("../img/photo_mask.png");
+            mask: url("../img/photo_mask.png");
+    -webkit-mask-size: 450px;
+       -moz-mask-size: 450px;
+        -ms-mask-size: 450px;
+            mask-size: 450px;
+}
+
+.info {
+    width: 350px;
+    right: 200px;
+    bottom: 160px;
+    position: absolute;
+}
+
+.title {
+    width: 250px;
+    height: 60px;
+    text-indent: -9999em;
+    background: url("../img/icons.png") 0 0 no-repeat;
+    background-size: 300px;
+}
+
+.desc {
+    color: #333;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.desc a {
+    color: #333;
+}
+
+.desc a:hover {
+    color: #306fff;
+}
+
+.mail-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #306fff url("../img/icons.png") -129px -75px no-repeat;
+    background-size: 300px;
+    position: absolute;
+    right: 100px;
+    bottom: -40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.mail-icon:hover {
+    background-color: #437cff;
+}
+
+.mail-icon:active {
+    background-color: #306fff;
+    box-shadow: none;
+}
+
+.socal-icons {
+    margin-top: 30px;
+}
+
+.socal-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.socal-icons a i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icons.png");
+    background-repeat: no-repeat;
+    background-size: 300px;
+    opacity: .5;
+}
+
+.socal-icons a:hover i {
+    opacity: .8;
+}
+
+.gh-icon {
+    background-position: 0 -100px;
+}
+.ui-icon {
+    background-position: -50px -100px;
+}
+
+.ins-icon {
+    background-position: -100px -100px;
+}
+
+.works h2 {
+    margin-top: 110px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.works-nav {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-}
-
-.logo {
-    width: 93px;
-    height: 25px;
-    background: url("../img/logo.png") 50% 50% no-repeat;
-    position: absolute;
-    top: 15px;
-    left: 20px;
-}
-
-.nav {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.nav-item {
-    float: left;
-}
-
-.nav-item a {
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 15px;
-    color: #777;
+.works-nav a {
+    color: #333;
+    font-size: 16px;
     text-decoration: none;
+    padding: 10px 20px;
+}
+
+.works-nav a.cur,
+.works-nav a:hover {
+    color: #306fff;
+}
+
+.works-list {
+    margin: 10px auto 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    width: 1200px;
+}
+
+.works-item.hide {
+    display: none;
+}
+
+.works-item {
+    padding: 0;
+    margin: 10px;
+}
+
+.works-item a {
+    color: #333;
+}
+
+.works-item a:hover {
+    color: #306fff;
+}
+
+.works-item p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.img-link img {
+    -webkit-transition: all .1s;
+       -moz-transition: all .1s;
+        -ms-transition: all .1s;
+            transition: all .1s;
+}
+
+.img-link:hover img {
+    opacity: .9;
+}
+
+.works-tag {
+    display: inline-block;
+    background-color: #ff3e3e;
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+    font-style: normal;
     font-size: 14px;
+    margin-right: 5px;
 }
 
-.nav-item .email {
-    background-color: #3a82ee;
-    color: #fff;
-    margin-left: 10px;
+.time {
+    color: #b4b4b4;
 }
 
-.nav-item a:hover {
-    color: #555;
-}
-
-.nav-item .email:hover {
-    color: #fff;
-    background-color: #2a72df;
-}
-
-.slogan {
-    color: #fff;
+footer {
     text-align: center;
-    font-weight: 200;
-}
-
-.slogan p {
-    margin: .2em 0;
-}
-
-.slogan .name {
-    font-size: 62px;
-    letter-spacing: .3em;
-}
-
-.slogan .job {
-    font-size: 22px;
-    letter-spacing: .7em;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 1.5dppx) {
-    body {
-        background-image: url("../img/bg@2x.jpg");
-    }
-
-    .logo {
-        background-image: url("../img/logo@2x.png");
-        background-size: 93px 25px;
-    }
-}
-
-@media screen and (max-aspect-ratio: 1440/900) {
-    body {
-        background-size: cover;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .slogan .name {
-        font-size: 58px;
-        letter-spacing: .2em;
-    }
-
-    .nav {
-        right: 10px;
-    }
-
-    .slogan .job {
-        font-size: 24px;
-        letter-spacing: .4em;
-    }
-
-    .nav-item .email {
-        position: fixed;
-        padding: 0 20px;
-        right: 10px;
-        bottom: 10px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .logo {
-        left: 10px;
-        top: 10px;
-        background-size: 62px;
-        width: 62px;
-        height: 18px;
-    }
-
-    .nav-item a {
-        padding: 0 7px;
-        height: 15px;
-        line-height: 15px;
-        color: #777;
-        text-decoration: none;
-        font-size: 12px;
-    }
-
-    .nav-item .email {
-        height: 30px;
-        line-height: 30px;
-    }
-
-    .slogan .name {
-        font-size: 38px;
-        letter-spacing: .2em;
-    }
-
-    .slogan .job {
-        font-size: 18px;
-        letter-spacing: .3em;
-    }
+    font-size: 14px;
+    padding: 15px 0 30px;
+    color: #999;
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
 }
