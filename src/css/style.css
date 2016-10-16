@@ -7,16 +7,16 @@ body {
 
 body {
     font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    background-color: #f0f0f0; 
+    background: #fafafa;
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
-    -webkit-transition: all .1s;
-        -moz-transition: all .1s;
-        -ms-transition: all .1s;
-            transition: all .1s;
+    -webkit-transition: all .15s;
+        -moz-transition: all .15s;
+        -ms-transition: all .15s;
+            transition: all .15s;
 }
 
 a:hover {
@@ -92,11 +92,16 @@ a:hover {
     position: absolute;
     right: 100px;
     bottom: -40px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+            transition: all .2s;
 }
 
 .mail-icon:hover {
-    background-color: #437cff;
+    /*background-color: #437cff;*/
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .3);
 }
 
 .mail-icon:active {
@@ -170,17 +175,19 @@ a:hover {
     margin: 10px auto 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     width: 1200px;
-}
-
-.works-item.hide {
-    display: none;
 }
 
 .works-item {
     padding: 0;
     margin: 10px;
+    width: 280px;
+}
+
+.works-item.hide {
+    display: none;
 }
 
 .works-item a {
@@ -209,14 +216,19 @@ a:hover {
 
 .works-tag {
     display: inline-block;
+    border-radius: 2px;
     background-color: #ff3e3e;
     color: #fff;
     height: 20px;
     line-height: 20px;
-    padding: 0 10px;
+    padding: 0 7px;
     font-style: normal;
     font-size: 14px;
-    margin-right: 5px;
+    margin-right: 3px;
+}
+
+.works-tag-dev {
+    background-color: #306fff;
 }
 
 .time {
