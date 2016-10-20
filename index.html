@@ -41,7 +41,7 @@
         <ul class="works-list">
             <li class="works-item" data-tag-item="dev">
                 <a class="img-link" target="_blank" href="https://github.com/cgzero/mshare">
-                    <img src="./photo/mshare.png" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/mshare.png" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-dev">Develop</i>
@@ -51,7 +51,7 @@
             </li>
             <li class="works-item" data-tag-item="dev">
                 <a class="img-link" target="_blank" href="https://github.com/cgzero/fecs-editor">
-                    <img src="./photo/fecs_editor.png" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/fecs_editor.png" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-dev">Develop</i>
@@ -61,7 +61,7 @@
             </li>
             <li class="works-item" data-tag-item="design">
                 <a class="img-link" target="_blank" href="http://www.ui.cn/detail/153359.html">
-                    <img src="./photo/pageshot.jpg" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/pageshot.jpg" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-design">Design</i>
@@ -71,7 +71,7 @@
             </li>
             <li class="works-item" data-tag-item="design">
                 <a class="img-link" target="_blank" href="http://www.ui.cn/detail/153116.html">
-                    <img src="./photo/efe_tshirt.jpg" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/efe_tshirt.jpg" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-design">Design</i>
@@ -81,7 +81,7 @@
             </li>
             <li class="works-item" data-tag-item="dev">
                 <a class="img-link" target="_blank" href="https://github.com/cgzero/koubei-assistant">
-                    <img src="./photo/koubei_assistant.png" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/koubei_assistant.png" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-dev">Develop</i>
@@ -91,7 +91,7 @@
             </li>
             <li class="works-item" data-tag-item="dev">
                 <a class="img-link" target="_blank" href="https://github.com/cgzero/launchpad-for-microsoft">
-                    <img src="./photo/launchpad_for_microsoft.png" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/launchpad_for_microsoft.png" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-dev">Develop</i>
@@ -101,7 +101,7 @@
             </li>
             <li class="works-item" data-tag-item="design">
                 <a class="img-link" target="_blank" href="http://www.ui.cn/detail/154385.html">
-                    <img src="./photo/finex.jpg" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/finex.jpg" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-design">Design</i>
@@ -111,7 +111,7 @@
             </li>
             <li class="works-item" data-tag-item="dev">
                 <a class="img-link" target="_blank" href="https://github.com/cgzero/launchpad-for-google">
-                    <img src="./photo/launchpad_for_google.png" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/launchpad_for_google.png" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-dev">Develop</i>
@@ -121,7 +121,7 @@
             </li>
             <li class="works-item" data-tag-item="dev">
                 <a class="img-link" target="_blank" href="https://github.com/cgzero/launchpad-for-icloud">
-                    <img src="./photo/launchpad_for_icloud.png" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/launchpad_for_icloud.png" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-dev">Develop</i>
@@ -131,7 +131,7 @@
             </li>
             <li class="works-item" data-tag-item="design">
                 <a class="img-link" target="_blank" href="http://www.ui.cn/detail/153108.html">
-                    <img src="./photo/photofolid_2013-2016.png" width="260px" height="195px">
+                    <img class="lazy" src="./photo/placeholder.png" data-original="./photo/photofolid_2013-2016.png" width="260px" height="195px">
                 </a>
                 <p>
                     <i class="works-tag works-tag-design">Design</i>
@@ -143,8 +143,14 @@
     </section>
     <footer>copyright@2016 cgzero.com</footer>
     <script src="./dep/jquery-3.1.1.min.js"></script>
+    <script src="./dep/jquery.lazyload.min.js"></script>
     <script>
         $(document).ready(function () {
+
+            $(function() {
+                $('img.lazy').lazyload();
+            });
+
             $('.works-nav-link').click(function () {
                 var self = $(this);
                 var tag = self.attr('data-tag');
@@ -159,7 +165,7 @@
                     $('.works-item[data-tag-item=' + tag + ']').removeClass('hide');
                 }
 
-                $('html').animate({scrollTop: $('.works-nav').offset().top}, 1000)
+                $('html').animate({scrollTop: $('.works-nav').offset().top}, 1000);
             })
         });
     </script>

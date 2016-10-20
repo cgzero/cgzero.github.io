@@ -205,6 +205,13 @@ a:hover {
     color: #333;
 }
 
+.img-link {
+    display: block;
+    width: 260px;
+    height: 195px;
+    background-color: #f4f4f4;
+}
+
 .img-link img {
     -webkit-transition: all .1s;
        -moz-transition: all .1s;
