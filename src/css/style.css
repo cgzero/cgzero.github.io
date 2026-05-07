@@ -1,7 +1,5 @@
-html, body,
-ul, li,
-h1, h2, h3, h4, h5, h6,
-p {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -13,6 +11,7 @@ p {
     --text-color: #1f1f1f;
     --surface-color: #f0f4f9;
     --surface-color-hover: #e2e6eb;
+    --logo-url: url(../img/logo.png);
 }
 
 @media screen and (min-width: 600px) {
@@ -34,11 +33,11 @@ p {
         --text-color: #e3e3e3;
         --surface-color: #1e1f20;
         --surface-color-hover: #2f3031;
+        --logo-url: url(../img/logo_dark.png);
     }
 }
 
 body {
-    box-sizing: border-box;
     background-color: var(--bg-color);
     font-family: Helvetica, Arial, sans-serif;
     color: var(--text-color);
@@ -53,13 +52,17 @@ header {
     display: flex;
     position: relative;
     justify-content: space-between;
-    padding: 16px var(--page-margin);
-    height: 48px;
+    align-items: center;
+    padding: 20px var(--page-margin) 36px;
+    height: 80px;
     background-color: var(--surface-color);
 
-    h1 img {
+    .logo {
         width: 88px;
         height: 24px;
+        background: var(--logo-url);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     &::after {
@@ -75,6 +78,7 @@ header {
 }
 
 .main {
+    box-sizing: content-box;
     padding: 24px var(--page-margin-content);
     max-width: 1200px;
     margin: 0 auto;
@@ -104,6 +108,8 @@ header {
     .banner {
         flex: 1;
         aspect-ratio: 440 / 280;
+        background-color: #fff;
+        border-radius: 12px;
 
         img {
             width: 100%;

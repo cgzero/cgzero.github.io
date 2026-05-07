@@ -2,5 +2,5 @@
 
 ## 文件说明
 
-- CNAME：用于 github 绑定域名
-- googlexxx.html：用于验证 Google 的开发者
+- CNAME：github 绑定域名
+- googlexxx.html：验证 Google Search Console（网址前缀验证，非网域验证，网域验证需 DNS 验证）
